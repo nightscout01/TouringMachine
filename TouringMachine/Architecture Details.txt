@@ -1,0 +1,12 @@
+﻿// Copyright Maurice Montag 2020
+// All Rights Reserved
+// See LICENSE file for more information
+
+The Touring Machine Architecture:
+
+This started out as me trying to make a Turing Machine during math class one day because I was bored.
+Alas, I did not fully understand what operations could be performed with the turing machine as specified
+by turing himself. I did not fully understand how the data and operations would be seperated, with the only
+method of "incrementing the program counter" as I saw it being a "shift" operation. I see now that instructions
+and data were meant to be treated seperately. However, by the time I realized that I had already began implementing
+a computer architecture that was (possibly only slightly) more advanced than what Turing had specified.

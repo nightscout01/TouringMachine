@@ -1,0 +1,24 @@
+﻿// Attempting to figure out how to add with loops
+// Copyright Maurice Montag 2020
+// All Rights Reserved
+// See LICENSE file for more information
+
+LOD $32  // load 32 into machine state
+STR @0000 // store 32 into memory at 0x0000
+LOD $60 // load 60 into machine state
+STR @0001  // store 60 into memory at 0x0001
+STR @0005  // where our result will be
+// above is just our setup for the two numbers we want to add
+LOD @0000  // load the first number (32) we want to add into machine state
+STR @0002  // store it (32) in 0x0002 so we can restore it later
+LOD @0000  // load the first number again for loop purposes
+DEC
+STR @0000  // store our decremented 32 into 0000
+LOD @0005  // load what we currently have saved in our result
+INC  // increment it up
+STR @0005  // save it back
+LOD @0000  // pull up the number we're decrementing
+CMP $0  // compare it to 0
+BNE $-21  // if we're not at 0 yet, loop back up
+LOD @0005 // when we're done, transfer the added result to the machine state
+HAL  // halt the machine

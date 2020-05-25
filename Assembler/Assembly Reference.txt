@@ -1,0 +1,26 @@
+﻿// Assembly Reference for Touring Machine Architecture
+// Copyright Maurice Montag 2020
+// All Rights Reserved
+// See LICENSE file for more information
+
+NDT (0x1) (Non-Deterministic) [fills a random cell with a random byte] {Feeling Lucky?}
+NOP (0x2) (No Operation) [Increments to next cell without doing anything]
+ERS #n (0x3) (Erase) [Sets cell n away from the current cell to 0]
+ERS @xxxx (0x4) (Erase) [Sets cell at memory address xxxx to 0]
+JMP #n (0x5) (Jump) [Relative jump to cell n away from the current cell]
+JMP @xxxx (0x6) (Jump) [Jump to memory address 0xXXXX]
+LOD $n (0x7) (Load) [Loads the immediate value n into current Machine State]
+LOD #n (0x8) (Load) [Loads the value at a cell n away from current cell into current Machine State]
+LOD @xxxx (0x9) [Loads the value at memory address 0xXXXX into current Machine State]
+STR #n (0xA) (Store) [Stores the machine state at a cell n away from current cell]
+STR @xxxx (0xB) (Store) [Stores the machine state at memory address 0xXXXX]
+INC (0xC) (Increment) [Increments the Machine State]
+DEX (0xD) (Decrement) [Decrements the Machine State]
+CMP $n (0xE) (Compare) [Compares the Machine state to the value in n, setting the flags accordingly]
+CMP #n (0xF) (Compare) [Compares the machine state to the value in a cell n away from the current cell]
+CMP @xxxx (0x10) (Compare) [Compares the machine state to the value at memory address 0xXXXX]
+BEQ #n (0x11) (Branch if Equal) [Relative jump to cell n away from the current cell if the equal flag is set]
+BNE #n (0x12) (Branch if Not Equal) [Relative jump to cell n away from the current cell if the equal flag is not set]
+DEI #n (0xFD) (Decode Instruction) [Decode and execute instruction at a cell n away from current cell]
+DEI @xxxx (0xFE) (Decode Instruction) [Decode and execute instruction at address 0xXXXX]
+HAL (0xFF) (Halt) [Stop Program Execution]
