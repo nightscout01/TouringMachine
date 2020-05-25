@@ -1,6 +1,6 @@
 # TouringMachine
 
-Coded Winter Quarter 2020. Uploaded to Github later.
+Coded Winter Quarter 2020. Uploaded to 5/24/2020
 
 An ISA + Assembler + Emulator that I first wrote while bored in math class one afternoon. Originally supposed to be a Turing Machine emulator, the project grew a little bit from there.
 
