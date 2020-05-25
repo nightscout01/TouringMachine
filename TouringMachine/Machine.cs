@@ -22,7 +22,7 @@ namespace TouringMachine
 
     class Machine
     {
-        private readonly List<byte> tape;  // in our turing machine the tape only extends out forever in the right direction
+        private readonly List<byte> tape;  // in our "turing machine" the tape only extends out forever in the right direction
         private int index;  // apparently array indexing doesn't support unsigned ints for some reason, that sucks :(.
         public byte MachineState { get; protected set; }
         public bool running;
